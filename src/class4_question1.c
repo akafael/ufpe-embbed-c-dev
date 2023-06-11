@@ -13,13 +13,13 @@ int main() {
 
   // User Input
   printf("Let's compare numbers. Please enter 2 numbers: ");
-  scanf("%d %d", &number1, &number2);
+  scanf("%u %u", &number1, &number2);
 
   // Output
   if (number1 == number2) {
-    printf("Both numbers are equal ( %d = %d )", number1, number2);
+    printf("Both numbers are equal ( %u = %u )", number1, number2);
   } else {
-    printf("The biggest number is %d", max(number1, number2));
+    printf("The biggest number is %u", max(number1, number2));
   }
 
   return 0;

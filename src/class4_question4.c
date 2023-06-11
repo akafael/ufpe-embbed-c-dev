@@ -16,10 +16,10 @@ int main() {
   }
 
   // User Input
-  printf("Lets divide a vector by %d:\n", divisor);
+  printf("Lets divide a vector by %u:\n", divisor);
 
   for (unsigned int i = 0; i < listSize; i++) {
-    printf("Please enter number from position %d: ");
+    printf("Please enter number from position %u: ", (i + 1));
     scanf("%f", &numberList[i]);
   }
 

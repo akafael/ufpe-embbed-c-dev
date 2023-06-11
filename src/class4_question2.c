@@ -24,7 +24,7 @@ int main() {
 
   // Output
   if (isFirstGreater(number1, number2, number3)) {
-    printf("Condition Satisfied!\n", number1, number2);
+    printf("Condition Satisfied!\n");
   } else {
     printf("Error\n");
   }

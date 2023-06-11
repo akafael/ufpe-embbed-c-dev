@@ -19,7 +19,7 @@ int main() {
   printf("Lets find a number inside a vector:\n");
 
   for (unsigned int i = 0; i < listSize; i++) {
-    printf("Please enter number from position %d: ");
+    printf("Please enter number from position %u: ", (i + 1));
     scanf("%f", &numberList[i]);
   }
 
@@ -38,7 +38,7 @@ int main() {
   if (numberPosition == listSize) {
     printf("Number %.2f not found inside list.\n", key);
   } else {
-    printf("Number %.2f found at position %d.\n", numberPosition);
+    printf("Number %.2f found at position %u.\n", key, numberPosition);
   }
 
   return 0;
