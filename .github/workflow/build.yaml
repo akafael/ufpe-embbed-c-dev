@@ -1,0 +1,13 @@
+name: C/C++ CI
+
+run-name: Building code from ${{ github.actor }}
+
+on: [push,pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    run:
+    - make
