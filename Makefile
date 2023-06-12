@@ -9,6 +9,7 @@ BINARIES = $(patsubst src/%.c, bin/%,$(SRC))
 
 # Rules -----------------------------------------------------------------------
 
+# Generate all binaries
 .phony=all
 all: $(BINARIES)
 
