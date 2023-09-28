@@ -10,32 +10,27 @@
  * @param end  End number
  * @return int
  */
-void printAllBut(const int start, const int end)
+void printOdds(const int start, const int end)
 {
+    printf("The following number between %d and %d are odd: ",start,end);
 
-    if (start < end)
+    for (int i = start; i <= end; i++)
     {
-        for (int i = start + 1; i < end; i++)
-        {
+        if(i % 2 == 1){
             printf("%d ", i);
         }
     }
-    else
-    {
-        for (int i = start - 1; i < end; i--)
-        {
-            printf("%d ", i);
-        }
-    }
+
+    printf("\n");
 }
 
 int main()
 {
-    int numberStart = 0;
-    int numberEnd = 0;
+    unsigned int numberStart = 0;
+    unsigned int numberEnd = 0;
 
     printf("Let's print a sequence. Please enter the target start an the target end numbers: ");
-    scanf("%d %d", &numberStart, &numberEnd);
+    scanf("%u %u", &numberStart, &numberEnd);
 
-    printAllBut(numberStart, numberEnd);
+    printOdds(numberStart, numberEnd);
 }
