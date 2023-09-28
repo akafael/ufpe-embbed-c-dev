@@ -3,9 +3,14 @@
 ##
 
 # Variables -------------------------------------------------------------------
-SRC_DIR=src
+
+# Get Makefile directory (enables using it as reference for relative paths)
+MAKEFILE_DIR:=$(dir $(realpath $(firstword $(MAKEFILE_LIST))))
+SRC_DIR=$(realpath $(MAKEFILE_DIR)/src)
+BIN_DIR = bin
+
 SRC = $(wildcard $(SRC_DIR)/*.c) $(wildcard $(SRC_DIR)/*.cpp)
-BINARIES = $(patsubst src/%.c, bin/%,$(SRC)) $(patsubst src/%.cpp, bin/%,$(SRC))
+BINARIES = $(patsubst $(SRC_DIR)/%.c, $(BIN_DIR)/%,$(SRC)) $(patsubst src/%.cpp, $(BIN_DIR)/%,$(SRC))
 
 # Rules -----------------------------------------------------------------------
 
@@ -13,13 +18,13 @@ BINARIES = $(patsubst src/%.c, bin/%,$(SRC)) $(patsubst src/%.cpp, bin/%,$(SRC))
 .phony=all
 all: $(BINARIES)
 
-bin/%: $(SRC_DIR)/%.c bin
+$(BIN_DIR)/%: $(SRC_DIR)/%.c bin
 	gcc $< -o $@
 
-bin/%: $(SRC_DIR)/%.cpp bin
+$(BIN_DIR)/%: $(SRC_DIR)/%.cpp bin
 	g++ $< -o $@
 
-bin:
+$(BIN_DIR):
 	mkdir -p $@
 
 .phony=clean
