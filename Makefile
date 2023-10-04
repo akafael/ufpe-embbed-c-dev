@@ -18,6 +18,9 @@ BINARIES = $(patsubst $(SRC_DIR)/%.c, $(BIN_DIR)/%,$(SRC)) $(patsubst src/%.cpp,
 .phony=all
 all: $(BINARIES)
 
+$(BIN_DIR)/class3_question5: $(SRC_DIR)/class3_question5.c bin
+	gcc $< -o $@ -lm
+
 $(BIN_DIR)/%: $(SRC_DIR)/%.c bin
 	gcc $< -o $@
 

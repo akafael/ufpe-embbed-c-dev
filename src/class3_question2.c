@@ -22,7 +22,7 @@ void printAllBut(const int start, const int end)
     }
     else
     {
-        for (int i = start - 1; i < end; i--)
+        for (int i = end + 1; i < start; i++)
         {
             printf("%d ", i);
         }
