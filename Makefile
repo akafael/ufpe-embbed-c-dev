@@ -21,6 +21,9 @@ all: $(BINARIES)
 $(BIN_DIR)/class3_question5: $(SRC_DIR)/class3_question5.c bin
 	gcc $< -o $@ -lm
 
+$(BIN_DIR)/class2_question5: $(SRC_DIR)/class2_question5.c bin
+	gcc $< -o $@ -lm
+
 $(BIN_DIR)/%: $(SRC_DIR)/%.c bin
 	gcc $< -o $@
 
