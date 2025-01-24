@@ -9,15 +9,15 @@
 /**
  * @brief Very basic program to evaluate if a given number is prime
  * 
- * Check all numbers between 2 and sn
+ * Check all numbers between 2 and the number itself$
  * 
  * @param number 
  * @return int 
  */
-int isPrime(const int number) {
+bool isPrime(const unsigned int number) {
   for(int i = 2; i < number; i++)
   {
-    if( number % i == 0)
+    if(number % i == 0)
     {
         return false;
     }

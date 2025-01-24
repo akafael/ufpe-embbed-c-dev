@@ -12,21 +12,15 @@
  */
 void printAllBut(const int start, const int end)
 {
+    const int isStartLower = (start < end);
+    const int first = (isStartLower)?start:end;
+    const int last = (isStartLower)?end:start;
 
-    if (start < end)
+    for (int i = first + 1; i < last; i++)
     {
-        for (int i = start + 1; i < end; i++)
-        {
-            printf("%d ", i);
-        }
+        printf("%d ", i);
     }
-    else
-    {
-        for (int i = end + 1; i < start; i++)
-        {
-            printf("%d ", i);
-        }
-    }
+    printf("\n");
 }
 
 int main()
