@@ -6,28 +6,6 @@ Instrucoes:
 Obs: podem submeter o codigo de cada questao como texto em comentario privado mesmo!
 Obs: podem submeter como arquivo arquivo em .c ou unico com todas as questoes ou para cada questao... porem, no formato .txt, .doc, .pdf
 
-(1) Desenvolva um algoritmo que some todos os números inteiros compreendidos entre 1 e 10 (inclusive).
-
-*Exemplo de execução – Exercício 1 - Caso de teste
-Somatório:  55
-
-(2) Desenvolva um algoritmo que receba dois números inteiros positivos A e B. Exiba na tela todos os números inteiros compreendidos entre A e B, excluindo os próprios A e B. Suponha que o usuário respeite o enunciado e insira valores válidos para A e B.
-
-* Exemplo de execução – Exercício 2 - Caso de teste
-Insira o valor de A:
-1
-Insira o valor de B:
-10
-Série numérica:
-2 3 4 5 6 7 8 9
-
-(3) Desenvolva um algoritmo que peça para o usuário inserir vários números inteiros. O algoritmo deverá contabilizar a quantidanstrucoes:
-- ler as cinco questoes abaixo e suas respectivas descricoes da saida e implemente os programas em C correspondentes
-- uma vez concluido as atividades, anexar aqui e submeter
-- marcar essa task como concluida
-
-Obs: podem submeter o codigo de cada questao como texto em comentario privado mesmo!
-Obs: podem submeter como arquivo arquivo em .c ou unico com todas as questoes ou para cada questao... porem, no formato .txt, .doc, .pdf
 (1) Faça o design de uma função "maior" que receba dois números [inteiros e positivos] e retorne o maior deles. Caso eles sejam iguais, deve-se mostrar a mensagem "Os números são iguais".
 
 * Exemplo de execução – Exercício 1 - Caso de teste 1
@@ -43,6 +21,7 @@ Insira o primeiro número:
 Insira o segundo número:
 1
 Os números são iguais
+
 (2) Faça o design de uma função "isFirstGreater" que receba três números. No final o programa deve imprimir "Condição satisfeita", na tela, caso o primeiro dado inserido seja maior do que os outros dois (o primeiro não pode ser igual a nenhum). Caso contrário, deve ser impressa a mensagem: "Erro". OBS: use vetor/array de 3 posicoes para armazenar os numeros lidos.
 
 *Exemplo de execução – Exercício 2 - Caso de teste 1
@@ -70,6 +49,7 @@ Insira o segundo número:
 Insira o terceiro número:
 1
 Erro
+
 (3) Faça o design de uma função "parImpar" que receba um número inteiro e verifique se esse número é par ou ímpar.
 
 *Exemplo de execução – Exercício 3 - Caso de teste 1
@@ -134,40 +114,74 @@ Insira o dado da posição  5:
 Insira a chave de busca:
 20
 Chave não encontrada!
-de de números positivos informados. Caso o usuário digite 0, o algoritmo deve mostrar quantidade contabilizada e encerrar.
 
-* Exemplo de execução – Exercício 3 - Caso de teste
-Insira um número:
-5
-Insira um número:
-5
-Insira um número:
--1
-Insira um número:
-0
-Quantidade de positivos: 2
+(6) Faça um programa que carregue dois vetores de dez elementos numéricos cada um e mostre um vetor resultante da intercalação desses dois vetores.                     
+                 *Exemplo de execução – Exercício 6 - Caso de teste 1
+Insira o dado vet1[0]:
+10
+Insira o dado vet1[1]:
+20
+Insira o dado vet1[2]:
+30
+Insira o dado vet1[3]:
+40
+Insira o dado vet1[4]:
+50
+Insira o dado vet1[5]:
+60
+Insira o dado vet1[6]:
+70
+Insira o dado vet1[7]:
+80
+Insira o dado vet1[8]:
+90
+Insira o dado vet1[9]:
+100
+Insira o dado vet2[0]:
+11
+Insira o dado vet2[1]:
+12
+Insira o dado vet2[2]:
+13
+Insira o dado vet2[3]:
+14
+Insira o dado vet2[4]:
+15
+Insira o dado vet2[5]:
+16
+Insira o dado vet2[6]:
+17
+Insira o dado vet2[7]:
+18
+Insira o dado vet2[8]:
+19
+Insira o dado vet2[9]:
+20
 
-(4) Desenvolva um algoritmo que peça ao usuário que insira dois números inteiros positivos A e B, no qual A deve ser menor que B (supõe-se que o usuário irá respeitar esse enunciado). O algoritmo deve mostrar, na tela, todos os números ímpares compreendidos entre A e B (inclusive).
+Vetor resultante:
+10  11  20  12  30  13  40  14  50  15  60  16  70  17  80  18  90  19  100  20
 
-* Exemplo de execução – Exercício 4 - Caso de teste
-Insira o valor de A:
+(7) Faça um programa que carregue um vetor com oito números inteiros, calcule e mostre dois vetores resultantes. O primeiro vetor resultante deve conter os números positivos. O segundo vetor resultante deve conter os números negativos. Cada vetor resultante vai ter no máximo oito posições, sendo que nem todas devem obrigatoriamente ser utilizadas. Imprima o conteúdo dos vetores resultantes, sem que sejam impressos "lixos de memória".
+
+*Exemplo de execução – Exercício 7 - Caso de teste 1
+Insira o dado vet1[0]:
 1
-Insira o valor de B:
-10
-É impar: 1
-É impar: 3
-É impar: 5
-É impar: 7
-É impar: 9
+Insira o dado vet1[1]:
+-1
+Insira o dado vet1[2]:
+2
+Insira o dado vet1[3]:
+-2
+Insira o dado vet1[4]:
+3
+Insira o dado vet1[5]:
+-3
+Insira o dado vet1[6]:
+4
+Insira o dado vet1[7]:
+-4
 
-(5) Desenvolva um algoritmo que receba um número N e informe se N é um número primo, ou não. A saber: um número primo é um inteiro positivo que só pode ser dividido por ele mesmo e por um, apenas.
-
-*Exemplo de execução – Exercício 5 - Caso de teste 1
-Insira um número:
-7
-7 é primo.
-
-*Exemplo de execução – Exercício 5 - Caso de teste 2
-Insira um número:
-10
-10 não é primo.
+Vetor de positivos:
+1  2  3  4
+Vetor de negativos:
+-1  -2  -3  -4

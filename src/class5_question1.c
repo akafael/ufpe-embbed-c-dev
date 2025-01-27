@@ -8,17 +8,18 @@ unsigned int max(const unsigned int a, const unsigned int b) {
 }
 
 int main() {
-  unsigned int numbers[2] = {0,0};
+  unsigned int number1 = 0;
+  unsigned int number2 = 0;
 
   // User Input
   printf("Let's compare numbers. Please enter 2 numbers: ");
-  scanf("%u %u", &numbers[0], &numbers[1]);
+  scanf("%u %u", &number1, &number2);
 
   // Output
-  if (numbers[0] == numbers[1]) {
-    printf("Both numbers are equal ( %u = %u )", numbers[0], numbers[1]);
+  if (number1 == number2) {
+    printf("Both numbers are equal ( %u = %u )", number1, number2);
   } else {
-    printf("The biggest number is %u", max(numbers[0], numbers[1]));
+    printf("The biggest number is %u", max(number1, number2));
   }
 
   return 0;

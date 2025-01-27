@@ -1,24 +1,19 @@
 /**
- * Basic program that checks if a number is Odd or Even.
+ * Basic program to evaluate if a number is odd or even;
  */
 #include <stdio.h>
+#include <stdbool.h>
 
-int isEven(const int number) { return (number % 2); }
+const bool isEven(const int number)
+{
+  return((number % 2) == 0);
+}
 
 int main() {
-  unsigned int number1 = 0;
+    int number = 0;
 
-  // User Input
-  printf("Let's check if a number is odd or even.\n"
-         "Please enter a number: ");
-  scanf("%d", &number1);
+    printf("Inform a number:\n");
+    scanf("%d",&number);
 
-  // Output
-  if (isEven(number1)) {
-    printf("Number %d is Even!\n", number1);
-  } else {
-    printf("Number %d is Odd!\n", number1);
-  }
-
-  return 0;
+    printf("The number %d is %s.\n",number, isEven(number)?"even":"odd");
 }
