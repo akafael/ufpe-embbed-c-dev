@@ -12,7 +12,7 @@
  */
 void printOdds(const int start, const int end)
 {
-    printf("The following number between %d and %d are odd: ",start,end);
+    printf("The following numbers between %d and %d are odds: ",start,end);
 
     for (int i = start; i <= end; i++)
     {

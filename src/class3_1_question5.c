@@ -53,5 +53,9 @@ int main() {
                 printf("%.2f/%.2f = %.2f\n", numbers[0], numbers[1], result);
             break;
         }
+        default:
+        {
+            printf("Error! Invalid Operation select: %c\n",operation);
+        }
     }
 }

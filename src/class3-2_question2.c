@@ -10,7 +10,7 @@
  * @param end  End number
  * @return int
  */
-void printAllBut(const int start, const int end)
+void printAllNumberBetween(const int start, const int end)
 {
     const int isStartLower = (start < end);
     const int first = (isStartLower)?start:end;
@@ -31,5 +31,5 @@ int main()
     printf("Let's print a sequence. Please enter the target start an the target end numbers: ");
     scanf("%d %d", &numberStart, &numberEnd);
 
-    printAllBut(numberStart, numberEnd);
+    printAllNumberBetween(numberStart, numberEnd);
 }
