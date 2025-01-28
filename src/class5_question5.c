@@ -4,42 +4,28 @@
 
 #include <stdio.h>
 
-int main() {
-  const unsigned int listSize = 5;
-  unsigned int numberPosition = listSize;
-  float key = 0.0;
-  float numberList[listSize];
+int main()
+{
+  int numberList[] = {0, 1, 2};
+  int *ptrNumber = numberList;
 
-  // Initialize both vectors with 0.0
-  for (unsigned int i = 0; i < listSize; i++) {
-    numberList[i] = 0.0;
-  }
+  printf("Starting Values:"
+         " [%d %d %d]\n",
+         numberList[0], numberList[1], numberList[2]);
 
-  // User Input
-  printf("Lets find a number inside a vector:\n");
+  // Setting value using [] operator
+  numberList[0] = 5;
 
-  for (unsigned int i = 0; i < listSize; i++) {
-    printf("Please enter number from position %u: ", (i + 1));
-    scanf("%f", &numberList[i]);
-  }
+  // Setting value using list pointer
+  *(numberList + 1) = 7;
 
-  printf("Please enter the value you would like to search: ");
-  scanf("%f", &key);
+  // Setting value using variable pointer
+  ptrNumber += 2;
+  *ptrNumber = 11;
 
-  // Search value inside vector
-  for (unsigned int i = 0, numberPosition = listSize; i < listSize; i++) {
-    if (numberList[i] == key) {
-      numberPosition == i;
-      break;
-    };
-  }
-
-  // Output
-  if (numberPosition == listSize) {
-    printf("Number %.2f not found inside list.\n", key);
-  } else {
-    printf("Number %.2f found at position %u.\n", key, numberPosition);
-  }
+  printf("Values after set operations:"
+         " [%d %d %d]\n",
+         numberList[0], numberList[1], numberList[2]);
 
   return 0;
 }

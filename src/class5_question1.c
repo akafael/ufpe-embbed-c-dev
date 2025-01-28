@@ -1,26 +1,31 @@
 /**
- * Basic program to compare two numbers and display the biggest one.
+ * Basic sample - using pointer to set values
  */
 #include <stdio.h>
 
-unsigned int max(const unsigned int a, const unsigned int b) {
-  return (a > b) ? a : b;
-}
-
 int main() {
-  unsigned int number1 = 0;
-  unsigned int number2 = 0;
+  char var_char = 'c';
+  int var_int = 0;
+  float var_float = 0.5;
 
-  // User Input
-  printf("Let's compare numbers. Please enter 2 numbers: ");
-  scanf("%u %u", &number1, &number2);
+  char *ptr_var_char = &var_char;
+  int *ptr_var_int = &var_int;
+  float *ptr_var_float = &var_float;
 
-  // Output
-  if (number1 == number2) {
-    printf("Both numbers are equal ( %u = %u )", number1, number2);
-  } else {
-    printf("The biggest number is %u", max(number1, number2));
-  }
+  printf("Start Values:");
+  printf("\n\tchar: %c",var_char);
+  printf("\n\tint: %d",var_int);
+  printf("\n\tfloat: %.2f",var_float);
+
+  *ptr_var_char = '*';
+  *ptr_var_int = '*';
+  *ptr_var_float = '*';
+
+  printf("\nValues after update:");
+  printf("\n\tchar: %c",var_char);
+  printf("\n\tint: %d",var_int);
+  printf("\n\tfloat: %.2f",var_float);
+  printf("\n");
 
   return 0;
 }

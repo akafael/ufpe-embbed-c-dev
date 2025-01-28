@@ -3,30 +3,20 @@
  */
 #include <stdio.h>
 
-int isFirstGreater(const unsigned int a, const unsigned int b,
-                   const unsigned int c) {
-  if ((a > b) && (a > c)) {
-    return 0;
-  }
-
-  return 1;
-}
-
 int main() {
-  unsigned int number1 = 0;
-  unsigned int number2 = 0;
-  unsigned int number3 = 0;
+  int number1 = 0;
+  int number2 = 0;
 
   // User Input
-  printf("Let's check if the first number is the greatest one.\n"
-         "Please enter 3 numbers: ");
-  scanf("%d %d %d", &number1, &number2, &number3);
+  printf("Let's check which value has the greatest address.\n"
+         "Please enter 2 numbers: ");
+  scanf("%d %d", &number1, &number2);
 
-  // Output
-  if (isFirstGreater(number1, number2, number3)) {
-    printf("Condition Satisfied!\n");
+  // Compare address and print the variable withe highest address
+  if (&number2 > &number1) {
+    printf("number2 = %d\n",number2);
   } else {
-    printf("Error\n");
+    printf("number1 = %d\n",number1);
   }
 
   return 0;

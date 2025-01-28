@@ -4,33 +4,24 @@
 #include <stdio.h>
 
 int main() {
-  const unsigned int listSize = 5;
-  const unsigned int divisor = 100;
-  float numberList[listSize];
-  float resultList[listSize];
+  const unsigned int listSize = 10;
+  int numbersList[listSize];
 
-  // Initialize both vectors with 0.0
+  // Set starting values
   for (unsigned int i = 0; i < listSize; i++) {
-    numberList[i] = 0.0;
-    resultList[i] = 0.0;
+    numbersList[i] = 1<<i;
   }
 
-  // User Input
-  printf("Lets divide a vector by %u:\n", divisor);
-
+  // Print memory address used
+  printf("Address used in memory:\n");
   for (unsigned int i = 0; i < listSize; i++) {
-    printf("Please enter number from position %u: ", (i + 1));
-    scanf("%f", &numberList[i]);
+    printf("(%u) -> [%p]\n",i,&numbersList[i]);
   }
 
-  // Divide all values
+  // Print memory address used with values
+  printf("Values stored in each memory position:\n");
   for (unsigned int i = 0; i < listSize; i++) {
-    resultList[i] = numberList[i] / divisor;
-  }
-
-  // Output
-  for (unsigned int i = 0; i < listSize; i++) {
-    printf("%.2f\n", resultList[i]);
+    printf("(%u) -> [%p] : %d\n",i,&numbersList[i],numbersList[i]);
   }
 
   return 0;

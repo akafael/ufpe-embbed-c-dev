@@ -1,24 +1,31 @@
 /**
- * Basic program that checks if a number is Odd or Even.
+ * Basic program that checks if the first number is greater the other 2.
  */
 #include <stdio.h>
 
-int isEven(const int number) { return (number % 2); }
+void swap(int *left, int *right){
+  int temp = *left;
+  *left = *right;
+  *right = temp;
+}
 
 int main() {
-  unsigned int number1 = 0;
+  int number1 = 0;
+  int number2 = 0;
 
   // User Input
-  printf("Let's check if a number is odd or even.\n"
-         "Please enter a number: ");
-  scanf("%d", &number1);
+  printf("Let's check which value has the greatest address.\n"
+         "Please enter 2 numbers: ");
+  scanf("%d %d", &number1, &number2);
 
-  // Output
-  if (isEven(number1)) {
-    printf("Number %d is Even!\n", number1);
-  } else {
-    printf("Number %d is Odd!\n", number1);
-  }
+
+  printf("Values before swap:\n");
+  printf("\tnumber1: %d, number2: %d\n",number1,number2);
+
+  swap(&number1,&number2);
+
+  printf("Values after swap:\n");
+  printf("\tnumber1: %d, number2: %d\n",number1,number2);
 
   return 0;
 }
